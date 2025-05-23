@@ -58,12 +58,15 @@ var placadevideo = {
     cat: 'Componente',
     disp: false
 }
-
+var precos = {
+    inverte: true
+}
 
 const produtos = [mouse, teclado, display, fonte, arduino, ram, ssd, processador, processadori7, placadevideo, mousepad, gabinete,]
 
 
 const btn = document.getElementById('btn');
+const btnpreco = document.getElementById('btnpreco');
 
 btn.addEventListener('click', function(event)
 {
@@ -114,9 +117,18 @@ btn.addEventListener('click', function(event)
     console.log(total)
     if (total == (produtos.length)){
     document.getElementById(nenhumdisp.id).style.display = 'flex';}
-        
-
 });
+btnpreco.addEventListener('click', function(event)
+{ 
+  event.preventDefault();
+  if(btn.preço.inverte == true){
+  article.style.flexDirection = 'row';
+  article.style.flexWrap = 'wrap';
+  btnpreco.innerHTML = "Ordenar Preço: do Menor para o  Maior";
+  precos.inverte = false}
+  else{
+  article.style.flexDirection = 'row-reverse';
+  article.style.flexWrap = 'wrap-reverse';
+  preco.innerHTML = "Ordenar Preço: do Maior para o Menor";}
 
-
-
+})
