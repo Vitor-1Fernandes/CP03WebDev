@@ -48,12 +48,25 @@ var gabinete = {
     cat: 'Acessório',
     disp: false
 }
+var processadori7 = {
+    id: 'processadori7',
+    cat: 'Componente',
+    disp: false
+}
+var placadevideo = {
+    id: 'placadevideo',
+    cat: 'Componente',
+    disp: false
+}
+var precos = {
+    inverte: true
+}
 
-const produtos = [mouse, teclado, display, fonte, arduino, ram, ssd, processador, mousepad, gabinete]
+const produtos = [mouse, teclado, display, fonte, arduino, ram, ssd, processador, processadori7, placadevideo, mousepad, gabinete,]
 
 
 const btn = document.getElementById('btn');
-const mousec = document.getElementById('mouse')
+const btnpreco = document.getElementById('btnpreco');
 
 btn.addEventListener('click', function(event)
 {
@@ -74,7 +87,7 @@ btn.addEventListener('click', function(event)
          document.getElementById(produtos[i].id).style.display = 'none';}
         }
     }
-     if (categoria == 'cat2'){
+    if (categoria == 'cat2'){
         for (let i = 0; i < (produtos.length); i++)
         {
          if (produtos[i].cat != 'Componente'){
@@ -88,8 +101,34 @@ btn.addEventListener('click', function(event)
          document.getElementById(produtos[i].id).style.display = 'none';}
         }
     }
-
+    if (categoria == 'cat3'){
+        for (let i = 0; i < (produtos.length); i++)
+        {
+         if (produtos[i].cat != 'Periférico'){
+         document.getElementById(produtos[i].id).style.display = 'none';}
+        }
+    }
+    let total = 0
+    for (let i = 0; i < (produtos.length); i++)
+    {
+        if (document.getElementById(produtos[i].id).style.display == 'none'){
+        total++}
+    }
+    console.log(total)
+    if (total == (produtos.length)){
+    document.getElementById(nenhumdisp.id).style.display = 'flex';}
 });
+btnpreco.addEventListener('click', function(event)
+{ 
+  event.preventDefault();
+  if(btn.preço.inverte == true){
+  article.style.flexDirection = 'row';
+  article.style.flexWrap = 'wrap';
+  btnpreco.innerHTML = "Ordenar Preço: do Menor para o  Maior";
+  precos.inverte = false}
+  else{
+  article.style.flexDirection = 'row-reverse';
+  article.style.flexWrap = 'wrap-reverse';
+  preco.innerHTML = "Ordenar Preço: do Maior para o Menor";}
 
-
-
+})
