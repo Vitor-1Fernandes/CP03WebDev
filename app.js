@@ -48,12 +48,22 @@ var gabinete = {
     cat: 'Acessório',
     disp: false
 }
+var processadori7 = {
+    id: 'processadori7',
+    cat: 'Componente',
+    disp: false
+}
+var placadevideo = {
+    id: 'placadevideo',
+    cat: 'Componente',
+    disp: false
+}
 
-const produtos = [mouse, teclado, display, fonte, arduino, ram, ssd, processador, mousepad, gabinete]
+
+const produtos = [mouse, teclado, display, fonte, arduino, ram, ssd, processador, processadori7, placadevideo, mousepad, gabinete,]
 
 
 const btn = document.getElementById('btn');
-const mousec = document.getElementById('mouse')
 
 btn.addEventListener('click', function(event)
 {
@@ -74,7 +84,7 @@ btn.addEventListener('click', function(event)
          document.getElementById(produtos[i].id).style.display = 'none';}
         }
     }
-     if (categoria == 'cat2'){
+    if (categoria == 'cat2'){
         for (let i = 0; i < (produtos.length); i++)
         {
          if (produtos[i].cat != 'Componente'){
@@ -88,6 +98,23 @@ btn.addEventListener('click', function(event)
          document.getElementById(produtos[i].id).style.display = 'none';}
         }
     }
+    if (categoria == 'cat3'){
+        for (let i = 0; i < (produtos.length); i++)
+        {
+         if (produtos[i].cat != 'Periférico'){
+         document.getElementById(produtos[i].id).style.display = 'none';}
+        }
+    }
+    let total = 0
+    for (let i = 0; i < (produtos.length); i++)
+    {
+        if (document.getElementById(produtos[i].id).style.display == 'none'){
+        total++}
+    }
+    console.log(total)
+    if (total == (produtos.length)){
+    document.getElementById(nenhumdisp.id).style.display = 'flex';}
+        
 
 });
 

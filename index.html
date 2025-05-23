@@ -11,32 +11,38 @@
         <h3>Web Dev Store</h3>
         <img src="images/logo.png" alt="Carrinho de Compras">
     </nav>
-    <form id="fitro">
+
+<form id="fitro">
 
     <div class="filtro"> 
+        
+        <div class="select">
         <p> Filtrar por categoria:</p>
+        <select name="categoria" id="categoria">
+            <option value="cat0">Selecionar</option>
+            <option value="cat1">Acessórios</option>
+            <option value="cat2">Componentes</option>
+            <option value="cat3">Periféricos</option>
+        </select>
+        </div>
+
+        <div class="input">
+        <input type="checkbox" id="disponibilidade" name="disponibilidade" value="true">
+        <label for="disponibilidade"> Somente disponíveis</label>
+        </div>
+        
+        <div class="botoes"> 
+        <div>
+            <button class="btn" id="btn"> Filtrar </button>
+        </div>
+        <div>
+            <button class="red" id="btn" class=> Apagar Filtros </button>
+        </div>
     
-    <select name="categoria" id="categoria">
-        <option value="cat0">Todas</option>
-        <option value="cat1">Acessórios</option>
-        <option value="cat2">Componentes</option>
-        <option value="cat3">Periféricos</option>
-    </select>
-
-
-    <div class="cheqbox"> 
-    <input type="checkbox" id="disponibilidade" name="disponibilidade" value="true">
-    <label for="disponibilidade"> Somente disponíveis</label>
-
-    <div class = "botao">
-    <button class="btn" id="btn"> Filtrar </button>
-    <div class = "botao">
-    <button class="btn" id="btn"> Apagar Filtros </button>
+    </div>
     
-    </div>
-    </div>
-    </div>
-    </form>
+</form>
+
     <article> 
        
         <div id="mouse" class="blocos">
@@ -69,7 +75,7 @@
                 <li>Periférico</li>
                 <li>Teclado Preto USB</li>
                 <li>R$ 22,49</li>
-                <li>Indisponível</li>
+                <li>Produto Indisponível</li>
           </ul>
         </div>
         <div  id="display" class="blocos">
@@ -150,26 +156,31 @@
                 <li>Produto Indisponível</li>
             </ul>
         </div>
-        <div  id="processador"  class="blocos">
+        <div  id="processadori7"  class="blocos">
             <div class = "boximg">
             <img src="images/i714700k.png" alt="Processador-i714">
             </div>
             <ul>
                 <li>Componente</li>
                 <li>Processador</li>
-                <li>R$ 1999,99</li>
+                <li>R$ 1.999,99</li>
                 <li>Produto Indisponível</li>
             </ul>
         </div>
-          <div  id="processador"  class="blocos">
+          <div  id="placadevideo"  class="blocos">
             <div class = "boximg">
             <img src="images/rtx.png" alt="PlacaDeVideo">
             </div>
             <ul>
                 <li>Componente</li>
                 <li>Placa de vídeo - RTX 4060</li>
-                <li>R$ 2999,99</li>
+                <li>R$ 2.999,99</li>
                 <li>Produto Indisponível</li>
+            </ul>
+        </div>
+        <div  id="nenhumdisp"  class="nenhumdisp">
+            <ul>
+                No momento não temos itens disponíveis para venda na categoria selecionada
             </ul>
         </div>
    </article>
