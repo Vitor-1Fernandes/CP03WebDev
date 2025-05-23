@@ -1,11 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Produtos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav>
+        <h3>Web Dev Store</h3>
+        <img src="images/logo.png" alt="Carrinho de Compras">
+    </nav>
+    <form id="fitro">
+
+    <div class="filtro"> 
+        <p> Filtrar por categoria:</p>
     
+    <select name="categoria" id="categoria">
+        <option value="cat0">Todas</option>
+        <option value="cat1">Acessórios</option>
+        <option value="cat2">Componentes</option>
+        <option value="cat3">Periféricos</option>
+    </select>
+
+
+    <div class="cheqbox"> 
+    <input type="checkbox" id="disponibilidade" name="disponibilidade" value="true">
+    <label for="disponibilidade"> Somente disponíveis</label>
+
+    <div class = "botao">
+    <button class="btn" id="btn"> Filtrar </button>
+    <div class = "botao">
+    <button class="btn" id="btn"> Apagar Filtros </button>
+    
+    </div>
+    </div>
+    </div>
+    </form>
+    <article> 
+       
+        <div id="mouse" class="blocos">
+            <div class = "boximg">
+                <img src="images/mouse.png" alt="Mouse">
+            </div>
+            <ul>
+                <li>Periférico</li>
+                <li>Mouse Preto USB</li>
+                <li>R$ 13,49</li>
+                <li>Produto Indisponível</li>
+            </ul>
+        </div> 
+        <div  id='mousepad' class="blocos">
+            <div class = "boximg">
+                <img src="images/mousepad.png" alt="Mousepad">
+            </div>
+            <ul>
+                <li>Acessório</li>
+                <li>Mousepad do Corinthians</li>
+                <li>R$ 17,99</li>
+                <li>5 unidades em estoque</li>
+          </ul>
+        </div>
+        <div  id="teclado" class="blocos">
+            <div class="boximg">
+                <img src="images/teclado.png" alt="Teclado">
+            </div>
+            <ul>
+                <li>Periférico</li>
+                <li>Teclado Preto USB</li>
+                <li>R$ 22,49</li>
+                <li>Indisponível</li>
+          </ul>
+        </div>
+        <div  id="display" class="blocos">
+            <div class = "boximg">
+                <img src="images/display.png" alt="Display">
+            </div>
+            <ul>
+                <li>Componente</li>
+                <li>Display LCD</li>
+                <li>R$ 33,49</li>
+                <li>3 Unidades em estoque</li>
+            </ul>    
+        </div>
+        <div  id='fonte' class="blocos">
+            <div class = "boximg">
+                <img src="images/fonte.png" alt="Fonte">
+            </div>
+            <ul>
+                <li>Componente</li>
+                <li>Fonte 220W</li>
+                <li>R$ 83,49</li>
+                <li>5 unidades em estoque</li>
+          </ul>
+        </div>
+        
+        <div  id="arduino" class="blocos">
+            <div class = "boximg">
+                <img src="images/arduino.png" alt="Arduino">
+            </div>
+            <ul>
+                <li>Componente</li>
+                <li>Arduino Uno</li>
+                <li>R$ 110,49</li>
+                <li>5 unidades em estoque</li>
+          </ul>
+        </div>
+        <div  id="ram" class="blocos">
+            <div class = "boximg">
+            <img src="images/ram.png" alt="Memória Ram">
+            </div>
+            <ul>
+                <li>Componente</li>
+                <li>Memória Ram 16gb Ddr4</li>
+                <li>R$ 253,00</li>
+                <li>5 unidades em estoque</li>
+            </ul>
+        </div>
+        <div  id="ssd" class="blocos">
+            <div class = "boximg">
+            <img src="images/ssd.png" alt="SSD">
+            </div>
+            <ul>
+                <li>Componente</li>
+                <li>SSD 256gb</li>
+                <li>R$ 269,99</li>
+                <li>5 unidades em estoque</li>
+            </ul>
+        </div>
+        <div  id="gabinete" class="blocos">
+            <div class = "boximg">
+            <img src="images/gabinete.png" alt="Gabinete">
+            </div>
+            <ul>
+                <li>Acessório</li>
+                <li>Gabinete RGB</li>
+                <li>R$ 300,00</li>
+                <li>Produto Indisponível</li>
+            </ul>
+        </div>
+        <div  id="processador"  class="blocos">
+            <div class = "boximg">
+            <img src="images/i310117.png" alt="Processador-i310">
+            </div>
+            <ul>
+                <li>Componente</li>
+                <li>Processador</li>
+                <li>R$ 599,99</li>
+                <li>Produto Indisponível</li>
+            </ul>
+        </div>
+        <div  id="processador"  class="blocos">
+            <div class = "boximg">
+            <img src="images/i714700k.png" alt="Processador-i714">
+            </div>
+            <ul>
+                <li>Componente</li>
+                <li>Processador</li>
+                <li>R$ 1999,99</li>
+                <li>Produto Indisponível</li>
+            </ul>
+        </div>
+          <div  id="processador"  class="blocos">
+            <div class = "boximg">
+            <img src="images/rtx.png" alt="PlacaDeVideo">
+            </div>
+            <ul>
+                <li>Componente</li>
+                <li>Placa de vídeo - RTX 4060</li>
+                <li>R$ 2999,99</li>
+                <li>Produto Indisponível</li>
+            </ul>
+        </div>
+   </article>
 </body>
+
+<script src="app.js"></script>
 </html>
