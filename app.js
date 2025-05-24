@@ -73,6 +73,10 @@ btn.addEventListener('click', function(event)
   event.preventDefault();
   const categoria = document.getElementById('categoria').value;
   const disponibilidade = document.getElementById('disponibilidade').checked;
+  for (let i = 0; i < (produtos.length); i++)
+    {
+     document.getElementById(produtos[i].id).style.display = 'flex';
+    }
   if (disponibilidade){
         for (let i = 0; i < (produtos.length); i++)
         {
@@ -121,14 +125,18 @@ btn.addEventListener('click', function(event)
 btnpreco.addEventListener('click', function(event)
 { 
   event.preventDefault();
-  if(btn.preço.inverte == true){
+
+  if(precos.inverte == true){
   article.style.flexDirection = 'row';
   article.style.flexWrap = 'wrap';
   btnpreco.innerHTML = "Ordenar Preço: do Menor para o  Maior";
-  precos.inverte = false}
+  precos.inverte = (!precos.inverte);}
   else{
   article.style.flexDirection = 'row-reverse';
   article.style.flexWrap = 'wrap-reverse';
-  preco.innerHTML = "Ordenar Preço: do Maior para o Menor";}
+  btnpreco.innerHTML = "Ordenar Preço: do Maior para o  Menor";
+  precos.inverte = (!precos.inverte);}
+  
+
 
 })
