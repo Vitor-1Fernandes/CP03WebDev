@@ -21,7 +21,7 @@ const apagarClick = document.getElementById('btnapagar');
 const filtroClick = document.getElementById('btnfiltro');
 const precoClick = document.getElementById('btnpreco');
 
-apagarClick.addEventListener('click', function (event) {
+apagarClick.addEventListener('click', function apagar(event) {
     event.preventDefault();
     document.querySelector('form').reset();
     for (let i = 0; i < produtos.length; i++) {
@@ -32,14 +32,14 @@ apagarClick.addEventListener('click', function (event) {
 
 filtroClick.addEventListener('click', function filtrar(event) {
     event.preventDefault();
-    const categoria = document.getElementById('categoria').value;
-    const disponibilidade = document.getElementById('disponibilidade').checked;
+    const categoriaSelecionada = document.getElementById('categoria').value;
+    const disponiveis = document.getElementById('disponibilidade').checked;
 
     for (let i = 0; i < produtos.length; i++) {
         document.getElementById(produtos[i].id).style.display = 'flex';
     }
 
-    if (disponibilidade) {
+    if (disponiveis) {
         for (let i = 0; i < produtos.length; i++) {
             if (!produtos[i].disp) {
                 document.getElementById(produtos[i].id).style.display = 'none';
@@ -47,7 +47,7 @@ filtroClick.addEventListener('click', function filtrar(event) {
         }
     }
 
-    if (categoria == 'cat1') {
+    if (categoriaSelecionada == 'cat1') {
         for (let i = 0; i < produtos.length; i++) {
             if (produtos[i].cat != 'Acessório') {
                 document.getElementById(produtos[i].id).style.display = 'none';
@@ -55,7 +55,7 @@ filtroClick.addEventListener('click', function filtrar(event) {
         }
     }
 
-    if (categoria == 'cat2') {
+    if (categoriaSelecionada == 'cat2') {
         for (let i = 0; i < produtos.length; i++) {
             if (produtos[i].cat != 'Componente') {
                 document.getElementById(produtos[i].id).style.display = 'none';
@@ -63,7 +63,7 @@ filtroClick.addEventListener('click', function filtrar(event) {
         }
     }
 
-    if (categoria == 'cat3') {
+    if (categoriaSelecionada == 'cat3') {
         for (let i = 0; i < produtos.length; i++) {
             if (produtos[i].cat != 'Periférico') {
                 document.getElementById(produtos[i].id).style.display = 'none';
@@ -85,7 +85,7 @@ filtroClick.addEventListener('click', function filtrar(event) {
     }
 });
 
-precoClick.addEventListener('click', function (event) {
+precoClick.addEventListener('click', function ordenar(event) {
     event.preventDefault();
 
     const article = document.getElementById('article');
